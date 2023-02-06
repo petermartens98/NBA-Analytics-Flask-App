@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: grey;
+}
+
+.Site_Title {
+    size: 28px;
+    color: black;
+}
+
+.Player_Title {
+    size: 28px;
+    color: gold;
+}
+
+form {
+    display: inline-block;
+    margin: 10px;
+}
+
+.main_buttons {
+    font-size: 20px;
+}
+
+.user_input {
+    font-size: 20px;
+}
+
+label {
+    font-size: 20px;
+}
+
+.container {
+      width: 650px;
+      text-align: left;
+}
+
+.dataframe {
+  background-color: black;
+  border-collapse: collapse;
+  width: auto;
+}
+
+.dataframe th, .dataframe td {
+  border: 1px solid #696969;
+  padding: 8px;
+  text-align: center;
+}
+
+.dataframe th {
+  background-color: #00BFFF;
+}
+
+.dataframe td {
+  background-color: #F5FFFA;
+}
+
+
+.inj th {
+  background-color: #FFA07A;
+  text-align: center;
+  padding: 5px;
+}
+
+.inj td {
+  background-color: #F5FFFA;
+  text-align: left;
+  padding: 2px;
+}
+
+.teams option {
+  font-size: 18px;
+  padding: 10px;
+}
+
+

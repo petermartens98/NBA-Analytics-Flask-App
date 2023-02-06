@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>NBA Analytics App</title>
+{% endblock %}
+
+{% block body %}
+<center>
+    <br>
+    <img src="static/nba-logo.png" height=100 alt="NBA logo" title="nba.com">
+    <h1 class="Site_Title"> NBA Analytics App</h1>
+
+    <form action="/player_reports_page">
+        <input class="main_buttons" type="submit" value="Players">
+    </form>
+
+    <form action="/team_reports_page">
+        <input class="main_buttons" type="submit" value="Teams">
+    </form>
+
+    <form action="/daily_matchups_page">
+        <input class="main_buttons" type="submit" value="Today's Matchups">
+    </form>
+
+    <form action="/injuries_page">
+        <input class="main_buttons" type="submit" value="Injuries">
+    </form>
+
+</center>
+{% endblock %}

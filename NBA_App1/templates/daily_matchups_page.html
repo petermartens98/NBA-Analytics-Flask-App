@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>NBA Daily Matchups</title>
+{% endblock %}
+
+{% block body %}
+<center>
+    <h1>NBA Daily Matchups</h1>
+
+    <form action="/">
+        <input class="main_buttons" type="submit" value="Home">
+    </form>
+    <br>
+    {{ today_matchups|safe }}
+</center>
+{% endblock %}

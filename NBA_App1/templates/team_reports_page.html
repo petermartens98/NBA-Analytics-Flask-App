@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>NBA Team Reports</title>
+{% endblock %}
+
+{% block body %}
+<center>
+    <h1 class="Team_Title">NBA Team Analytics</h1>
+
+    <form>
+        <label for="textbox">Enter Team Name:</label>
+        <input list= "teams" type="text" id="textbox" name="team_name">
+        <datalist id="teams">
+            {% for team in teams %}
+                <option value="{{ team }}" >
+            {% endfor %}
+        </datalist>
+        <input type="submit" class="main_buttons" value="Generate Report">
+    </form>
+
+    <form action="/">
+        <input class="main_buttons" type="submit" value="Home">
+    </form>
+
+    <h1>{{ team_name }}</h1>
+
+    <img src = "{{ team_logo }}" height="200px">
+    <br>
+    <br>
+    <img src="{{ points_plot }}" alt="Points_Plot" width="700px">
+</center>
+{% endblock %}

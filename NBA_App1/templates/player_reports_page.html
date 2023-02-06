@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>NBA Player Reports</title>
+{% endblock %}
+
+{% block body %}
+
+
+    <h1 class="Player_Title" style="margin-left: 20px;">NBA Player Analytics</h1>
+
+    <form>
+        <label for="textbox" style="margin-left: 20px;"><b>Enter Player Name:</b></label>
+        <input list= "players" type="text" id="textbox" name="player_name">
+        <datalist id="players">
+            {% for player in players %}
+                <option value="{{ player }}" >
+            {% endfor %}
+        </datalist>
+        <input type="submit" class="main_buttons" value="Generate Report">
+    </form>
+
+    <form action="/">
+        <input class="main_buttons" type="submit" value="Home">
+    </form>
+
+    <br>
+    <br>
+    <div style="display: flex;">
+        <img src="{{ player_image }}" alt="Player Image" width="350" style="margin-left: 20px;">
+        <img src="{{ team_image }}" alt="Team Logo" height="60" style="margin-top: 20px; margin-left: -80px;">
+        <div style="align:left; margin-left: 20px;">
+            <h2>{{ player_name }}</h2>
+            <h5 style="margin-left: 10px;">{{ player_team }}</h5>
+            <h5 style="margin-left: 10px;">{{ player_hwa }}</h5>
+        </div>
+    </div>
+    <p class="container" align="left" style="margin-left: 30px;">
+        {{ player_summary|safe }}
+    </p>
+
+    <br>
+    <img src="{{ player_pts_plot_url }}" alt="PTS_Plot" width="650" style="margin-left: 20px;">
+
+
+{% endblock %}

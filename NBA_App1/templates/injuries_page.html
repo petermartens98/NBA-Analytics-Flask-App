@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>NBA Injuries</title>
+{% endblock %}
+
+{% block body %}
+<center>
+    <h1>NBA Injuries</h1>
+
+
+    <h5 style="display:inline;">Link to Data: </h5>
+    <a href= "https://www.cbssports.com/nba/injuries/" target=_blank style="display:inline;">
+        https://www.cbssports.com/nba/injuries/</a>
+    <br>
+    <form action="/">
+        <input class="main_buttons" type="submit" value="Home">
+    </form>
+
+    {{ today_injuries|safe }}
+
+
+</center>
+{% endblock %}
